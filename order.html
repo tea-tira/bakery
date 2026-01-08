@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - FreshBake</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>FreshBake</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">О нас</a>
+                    <a href="menu.html" class="nav-link">Выпечка</a>
+                    <a href="order.html" class="nav-link active">Заказ</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="form-container">
+                <h2>Оформление заказа</h2>
+                <h4>* Обязательное поле</h4>
+                <form id="registrationForm" method="POST">
+                    <div class="form-group">
+                        <label for="firstName" class="required">Имя</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Введите ваше имя" required minlength="2"
+                        pattern="^[А-Яа-яЁё]+$"
+                        title="Формат: кириллица">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="required">Фамилия</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Введите вашу фамилию" required minlength="2"
+                        pattern="^[А-Яа-яЁё]+$"
+                        title="Формат: кириллица">
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Отчество</label>
+                        <input type="text" id="middleName" name="middleName" placeholder="Введите ваше отчество"
+                        pattern="^[А-Яа-яЁё]+$"
+                        title="Формат: кириллица">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Дата рождения</label>
+                        <input type="date" id="birthDate" name="birthDate" placeholder="Выберите дату рождения">
+                    </div>
+                    <div class="form-group">
+                        <label>Пол</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Мужской</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Женский</label>
+                            </div>
+                        </div>
+                    </div>     
+                    <div class="form-group">
+                        <label for="phone" class="required">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (900) 123-45-67" required 
+                        pattern="^(\+7|8)[\s][\(][0-9]{3}[\)][\s][0-9]{3}[\-][0-9]{2}[\-][0-9]{2}$"
+                        title="Формат: +7/8 (900) 123-45-67">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">Электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="required">Адрес доставки</label>
+                        <input type="text" id="address" name="address" placeholder="Введите адрес доставки" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryDate" class="required">Дата доставки</label>
+                        <input type="date" id="deliveryDate" name="deliveryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Комментарий к заказу</label>
+                        <textarea id="comments" name="comments" placeholder="Дополнительные пожелания" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="required">Пароль для аккаунта</label>
+                        <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                    </div>  
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">Подтверждение пароля</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
+                    </div>   
+                    <div class="buttons">
+                        <button type="submit" id="submitBtn">Отправить заказ</button>
+                        <button type="reset">Очистить форму</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>FreshBake</h3>
+                    <p>Пекарня с любовью к традициям</p>
+                    <p>© <span id="currentYear">2025</span> Все права защищены</p>
+                </div>
+                <div class="footer-contacts">
+                    <p>Контакты:</p>
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    <a href="mailto:hello@freshbake.ru">hello@freshbake.ru</a>
+                </div>
+                <div class="footer-hours">
+                    <p>Часы работы:</p>
+                    <p>Пн-Пт: 8:00-20:00</p>
+                    <p>Сб-Вс: 9:00-18:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/password.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const birthDateInput = document.getElementById('birthDate');
+            const submitBtn = document.getElementById('submitBtn');
+            const deliveryDateInput = document.getElementById('deliveryDate');
+            
+            // Устанавливаем минимальную дату доставки на завтра
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            deliveryDateInput.min = tomorrow.toISOString().split('T')[0];
+            
+            function checkAge() {
+                if (birthDateInput.value) {
+                    const birthDate = new Date(birthDateInput.value);
+                    const today = new Date();
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const monthDiff = today.getMonth() - birthDate.getMonth();
+                    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+                    if (age < 18) {
+                        submitBtn.disabled = true;
+                        alert('Оформление заказа невозможно, возраст меньше 18 лет');
+                    } else {
+                        submitBtn.disabled = false;
+                    }
+                }
+            }
+            
+            birthDateInput.addEventListener('change', checkAge);
+            
+            // Валидация даты доставки
+            deliveryDateInput.addEventListener('change', function() {
+                const selectedDate = new Date(this.value);
+                const today = new Date();
+                today.setHours(0,0,0,0);
+                
+                if (selectedDate < tomorrow) {
+                    alert('Дата доставки должна быть не раньше завтрашнего дня');
+                    this.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
