@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://tea-tira.github.io/bakery//sitemap.xml
